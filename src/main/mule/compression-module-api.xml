@@ -16,7 +16,7 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
 		</compression:compress>
 		<file:write doc:name="WriteCompressedFile" doc:id="64a45f1f-c790-4e14-8867-80b0e86e2d1d" config-ref="File_Config" path="C:\Users\ysangam\Desktop\Compressed\compressedFile.pdf"/>
 		<logger level="INFO" doc:name="LOG DEBUG Final Response" doc:id="719190a7-5c71-46e5-a291-bfb0dbd44c72" message="File Compressed Successfully"/>
-		<set-payload value="File Compressed Successfully" doc:name="PL SET Static Payload for Final Response" doc:id="3a4ee826-a211-4415-9add-fa5ece8fc7cf" />
+		<set-payload value='#["File Compressed Successfully"]' doc:name="PL SET Static Payload for Final Response" doc:id="3a4ee826-a211-4415-9add-fa5ece8fc7cf" />
 	</flow>
 	<flow name="compressfileFlow1" doc:id="a880f4c7-9691-471f-8ec7-cd2c88b6b7f7" >
 		<file:listener doc:name="On New or Updated File" doc:id="0acf2c8e-69ef-4e22-ae75-51053695f175" config-ref="File_Config" directory="C:\Users\ysangam\Desktop\Compressed">
